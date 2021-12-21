@@ -6,6 +6,7 @@ from rest_framework.views import APIView
 
 from quickstart.data import Status
 from quickstart.serializers import UserSerializer, GroupSerializer, StatusSerializer
+from quickstart.tasks import example_celery_task
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -31,6 +32,12 @@ class WebserverStatus(APIView):
     List all snippets, or create a new snippet.
     """
     def get(self, request):
-
         serializer = StatusSerializer(Status("ok"))
+        return Response(serializer.data)
+
+
+class TriggerCeleryTask(APIView):
+    def post(self, request):
+        example_celery_task.delay()
+        serializer = StatusSerializer(Status("created celery task"))
         return Response(serializer.data)
