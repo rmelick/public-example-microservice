@@ -34,3 +34,10 @@ if you forgot to set the password of the database user
 ```shell
 psql -c "ALTER ROLE super WITH PASSWORD 'mypassword'"
 ```
+
+```shell
+python manage.py createsuperuser
+Username: admin
+Email address: admin@example.com
+Password: password
+```
