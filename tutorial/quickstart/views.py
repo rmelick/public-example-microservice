@@ -30,7 +30,7 @@ class WebserverStatus(APIView):
     """
     List all snippets, or create a new snippet.
     """
-    def get(self, request, format=None):
+    def get(self, request):
 
         serializer = StatusSerializer(Status("ok"))
         return Response(serializer.data)
