@@ -30,7 +30,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('status', views.WebserverStatus.as_view()),
+    path('status', views.CheckWebserverStatus.as_view()),
     path('celerytask', views.TriggerCeleryTask.as_view()),
 ]
 

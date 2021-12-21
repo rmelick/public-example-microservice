@@ -14,7 +14,9 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['url', 'name']
 
 
-class StatusSerializer(serializers.Serializer):
+class WebserverStatusSerializer(serializers.Serializer):
+    webserver_status = serializers.CharField(read_only=True)
+    webserver_status_created = serializers.DateTimeField()
     status = serializers.CharField(read_only=True)
     created = serializers.DateTimeField()
 
