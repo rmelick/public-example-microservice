@@ -29,15 +29,8 @@ from local dev mysql (docker exec)
 ```shell
 mysql -p
 CREATE DATABASE microservicedb;
-
-# enable the test user to create test databases
-psql -c "alter user mydatabaseuser createdb" -d mydatabase
 ```
 
-if you forgot to set the password of the database user
-```shell
-psql -c "ALTER ROLE mydatabaseuser WITH PASSWORD 'mypassword'"
-```
 
 ```shell
 # migrate the database
@@ -45,7 +38,7 @@ psql -c "ALTER ROLE mydatabaseuser WITH PASSWORD 'mypassword'"
 ```
 
 ```shell
-python manage.py createsuperuser
+./manage.py createsuperuser
 Username: admin
 Email address: admin@example.com
 Password: password

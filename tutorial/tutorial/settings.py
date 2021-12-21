@@ -133,6 +133,6 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10
 }
 
-CELERY_BROKER_URL = os.environ.get("CELERY_BROKER_URL", "pyamqp://service1user:service1pass@localhost:10003/service1vhost")
+CELERY_BROKER_URL = os.environ.get("CELERY_BROKER_URL", "pyamqp://service2user:service2pass@localhost:10003/service2vhost")
 
 WEBSERVER_URL = os.environ.get("WEBSERVER_URL", "http://localhost:9000")
