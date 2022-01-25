@@ -1,7 +1,13 @@
 # public-example-django
-A variation on the django app
+A variation on the django app, for use in the docker-local-dev blog.
+
 1. Uses mysql instead of postgres
 2. Makes a call to the main webapp to simulate being a microservice
+
+Related repositories:
+* [public-docker-local-dev](https://github.com/vidahealth/public-docker-local-dev) is the main repository for the local dev environment
+* https://github.com/vidahealth/public-example-django is the example main backend webserver service
+* [public-example-microservice](https://github.com/vidahealth/public-example-microservice) (this respository) is an example of a "microservice" that makes calls back to the main backend web service
 
 #
 ```shell
