@@ -1,5 +1,5 @@
 # public-example-django
-A variation on the django app, for use in the docker-local-dev blog.
+A variation on the django app, for use in the docker-local-dev [blog post](https://engineering.vida.com/blog/docker-local-dev).
 
 1. Uses mysql instead of postgres
 2. Makes a call to the main webapp to simulate being a microservice
